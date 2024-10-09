@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { NavBar } from "./components/navBar";
+import { Providers } from "./providers";
+import { EdgeStoreProvider } from "@/lib/edgestore";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,11 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-emerald-600 pt-36 min-h-screen`}
       >
-        {children}
+        <Providers>
+          <NavBar />
+          <EdgeStoreProvider>{children}</EdgeStoreProvider>
+        </Providers>
       </body>
     </html>
   );

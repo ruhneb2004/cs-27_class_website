@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String   @id @default(cuid())
+  name    String   @unique
+  imageUrl String?
+  description String?
+  currentTinkering CurrentTinkering[]
+  interestedDomains InterestedDomain[]
+}
+
+model CurrentTinkering {
+  id String @id @default(cuid())
+  name String
+  description String?
+  userId String?
+  user User? @relation(fields: [userId], references: [id])
+}
+
+model InterestedDomain {
+  id String @id @default(cuid())
+  name String
+  userId String?
+  user User? @relation(fields: [userId], references: [id])
+}
+
+model Event {
+  id String @id @default(cuid())
+  name String
+  description String?
+  startDate String
+  endDate String
+  location String
+  eventUrl String
+}
