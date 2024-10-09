@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import EventAsList from "../components/eventAsList";
 import axios from "axios";
 import { useSession } from "next-auth/react";
-import { stat } from "fs";
 
 interface EventData {
   id: string;
@@ -154,7 +153,10 @@ export default function EventPage() {
           <div
             className="bg-green-400 px-6 py-1 text-sm border-none rounded-full shadow-sm shadow-black absolute right-40 btn"
             onClick={() => {
-              document.getElementById("my_modal_5")?.showModal();
+              const modal = document.getElementById(
+                "my_modal_5"
+              ) as HTMLDialogElement;
+              modal.showModal();
             }}
           >
             Add

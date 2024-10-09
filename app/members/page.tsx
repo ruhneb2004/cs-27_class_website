@@ -1,12 +1,8 @@
 "use client";
-import Image from "next/image";
-import { memberData } from "../memberData";
 import { useEffect, useState } from "react";
-import { InterestedDomain } from "../profile/page";
 import axios from "axios";
 import MemberCard from "../components/MemberCard";
 import { useSession } from "next-auth/react";
-import { stat } from "fs";
 
 interface Member {
   id: string;
@@ -17,7 +13,7 @@ interface Member {
 }
 
 const MembersPage = () => {
-  const [filter, setFilter] = useState<String>("");
+  const [filter, setFilter] = useState<string>("");
 
   const [memberData, setMemberData] = useState<Member[]>([]);
   console.log(filter);
@@ -54,6 +50,7 @@ const MembersPage = () => {
           ) {
             return (
               <MemberCard
+                key={member.id}
                 name={member.name}
                 description={member.description}
                 badges={member.interestedDomains.map((domain) => domain.name)}

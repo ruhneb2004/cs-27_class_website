@@ -10,7 +10,7 @@ const handler = NextAuth({
   ],
   callbacks: {
     async signIn({ user }) {
-      const emailRegex = /^tcr23cs0(0[1-9]|[1-6][0-9]|7[0-7])@gectcr\.ac\.in$/;
+      const emailRegex = /^tcr23cs0(0[1-9]|[1-7][0-9]|80)@gectcr\.ac\.in$/;
       if (emailRegex.test(user?.email || "")) {
         return true;
       } else {

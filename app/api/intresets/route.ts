@@ -1,7 +1,7 @@
 import prisma from "@/lib/db";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function DELETE(req) {
+export async function DELETE(req: NextRequest) {
   const redBody = await req.json();
   try {
     const interestedDomain = await prisma.interestedDomain.findFirst({

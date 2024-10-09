@@ -1,5 +1,5 @@
 import prisma from "@/lib/db";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET() {
   try {
@@ -10,7 +10,7 @@ export async function GET() {
   }
 }
 
-export async function DELETE(req) {
+export async function DELETE(req: NextRequest) {
   const reqBody = await req.json();
   try {
     const data = await prisma.event.delete({
@@ -24,7 +24,7 @@ export async function DELETE(req) {
   }
 }
 
-export async function POST(req) {
+export async function POST(req: NextRequest) {
   try {
     const reqBody = await req.json();
     const data = await prisma.event.create({

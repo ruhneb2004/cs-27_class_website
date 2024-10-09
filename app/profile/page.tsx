@@ -88,12 +88,15 @@ export default function ProfilePage() {
           <div className="avatar">
             <div className="mask mask-squircle">
               <img
-                src={imgUrl || session?.user?.image}
+                src={imgUrl || session?.user?.image || ""}
                 alt="profile image of a handsome person"
                 className="min-w-[100px] max-w-[250px] max-h-[200px] min-h-[100px] cursor-pointer"
-                onClick={() =>
-                  document.getElementById("my_modal_1").showModal()
-                }
+                onClick={() => {
+                  const modal = document.getElementById(
+                    "my_modal_1"
+                  ) as HTMLDialogElement;
+                  modal.showModal();
+                }}
               />
             </div>
           </div>

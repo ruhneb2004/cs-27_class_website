@@ -3,10 +3,10 @@ I put it inside an array instead of using a db because this is only place the da
 */
 
 export const memberData: {
-  name: String;
-  description: String;
-  badges: String[];
-  imageUrl: String;
+  name: string;
+  description: string;
+  badges: string[];
+  imageUrl: string;
 }[] = [
   {
     name: "Benhur P Benny",

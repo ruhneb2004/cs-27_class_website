@@ -1,18 +1,16 @@
 "use client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useSession } from "next-auth/react";
 const MemberCard = ({
   name,
   description,
   badges,
   imageUrl,
 }: {
-  name: String;
-  description: String;
-  badges: String[];
-  imageUrl: String;
+  name: string;
+  description: string;
+  badges: string[];
+  imageUrl: string;
 }) => {
-  const { data: session } = useSession();
   return (
     <a
       className="card bg-base-100 w-64 shadow-xl text-black cursor-pointer"
@@ -38,8 +36,12 @@ const MemberCard = ({
         <h2 className="card-title">{name}</h2>
         <p className="max-h-10 overflow-auto">{description}</p>
         <div className="card-actions justify-end">
-          {badges.map((badge) => {
-            return <div className="badge">{badge}</div>;
+          {badges.map((badge, index) => {
+            return (
+              <div className="badge" key={index}>
+                {badge}
+              </div>
+            );
           })}
         </div>
       </div>
