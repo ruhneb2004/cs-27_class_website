@@ -1,7 +1,6 @@
 "use client";
 export const dynamic = "force-dynamic";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import MemberCard from "../components/MemberCard";
 import { useSession } from "next-auth/react";
 
@@ -22,12 +21,11 @@ const MembersPage = () => {
   const fetchMemberData = async () => {
     try {
       console.log("getting member data");
-      const res = await axios.get("api/allUserDetail", {
-        headers: {
-          "Cache-Control": "no-store",
-        },
+      const res = await fetch("api/allUserDetail", {
+        cache: "no-store",
       });
-      setMemberData(res.data);
+      const data = await res.json();
+      setMemberData(data);
     } catch (error) {
       console.error("Error fetching member data:", error);
     }
