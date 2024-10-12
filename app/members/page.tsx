@@ -19,11 +19,21 @@ const MembersPage = () => {
   const [memberData, setMemberData] = useState<Member[]>([]);
   console.log(filter);
 
-  useEffect(() => {
-    axios.get("api/allUserDetail").then((res) => {
+  const fetchMemberData = async () => {
+    try {
+      const res = await axios.get("api/allUserDetail", {
+        headers: {
+          "Cache-Control": "no-store",
+        },
+      });
       setMemberData(res.data);
-      console.log(res.data);
-    });
+    } catch (error) {
+      console.error("Error fetching member data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchMemberData();
   }, []);
 
   const { status } = useSession();
