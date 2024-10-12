@@ -56,9 +56,7 @@ export default function ProfilePage() {
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box text-black">
           <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">
-            Press ESC key or click the button below to close
-          </p>
+          <p className="py-4">Try to upload small sized images.</p>
           <input
             type="file"
             onChange={(e) => {
