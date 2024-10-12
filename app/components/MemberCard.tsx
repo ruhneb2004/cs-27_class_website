@@ -1,5 +1,6 @@
 "use client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Image from "next/image";
 const MemberCard = ({
   name,
   description,
@@ -21,13 +22,15 @@ const MemberCard = ({
        */
     >
       <AspectRatio ratio={11 / 12}>
-        <img
+        <Image
           src={`${
             imageUrl
               ? imageUrl
               : "/images/vivek-sumanth-lJ4ibw0cMf4-unsplash.jpg"
           }`}
           alt="Shoes"
+          width={300}
+          height={400}
           className="rounded-t-xl w-full h-full object-cover"
         />
       </AspectRatio>

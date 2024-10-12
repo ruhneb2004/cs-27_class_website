@@ -21,6 +21,7 @@ const MembersPage = () => {
 
   const fetchMemberData = async () => {
     try {
+      console.log("getting member data");
       const res = await axios.get("api/allUserDetail", {
         headers: {
           "Cache-Control": "no-store",

@@ -10,6 +10,7 @@ const nextConfig = {
         pathname: "**",
       },
     ],
+    domains: ["files.edgestore.dev"],
   },
 };
 
