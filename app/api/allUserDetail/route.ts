@@ -7,7 +7,9 @@ export async function GET() {
         interestedDomains: true,
       },
     });
-    return Response.json(completeUserDetails);
+    const res = Response.json(completeUserDetails);
+    res.headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
+    return res;
   } catch (error) {
     console.log("Error fetching user data:", error);
   }
