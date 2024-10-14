@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ceeyees 27 Class Website
 
-## Getting Started
+This is the offical class website for the CSE 27 batch of GEC Thrissur. This is not complete by any means, but it will be soon(well I guess 😅...). The website provides details about every student of our batch and also showcases info about event, achievements and what not. This is an open source project and this could be much more than what I going to describe here, so feel to check out and maybe contribute a little.
 
-First, run the development server:
+### Disclaimer
+Before I begin, I have created this template website in a very small amount of time and I am not sure about the security it provides, so don't put sensitive info or photos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<img width="1680" alt="Screenshot 2024-10-14 at 5 10 50 PM" src="https://github.com/user-attachments/assets/ef3a2b89-3d5a-4cf4-a543-7514530355c1">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The website is view only for the outsiders, only the people of the CSE 27 batch can login with their college email id, so for making any changes on the website do login with that email id!
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Some Common Questions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### How does this work? What is going on here?
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Well it's alright to be a little confused at first, as there are many files and all but soon you will get the gist of this. The entire website is written in **javascript**, it's not plain js but a little bit different. I will explain what is different here in a min. The entire website is written using a framework called **nextjs** it's a framework of react which is a framework js 😵‍💫. Well it's a bit confusing and you don't really need to know all that stuff, but it's what it's used to write in. So if you want to contribute here or add some major feature you may have to look it up a bit (well not if you are adil). For styling many of you may have used plain css but it's a bit redundant and difficult to manange, so I have opted for using **tailwind**. Tailwind is pretty simple, it's basically writing your css inside your div elements. The elements in the page like button, modals, input boxes and some other things from **daisyui** and **shadcn**, this things make development very easy so do try to use and understand them effectively.
