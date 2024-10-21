@@ -29,4 +29,8 @@ Well it's very similar to the standard open source contribution.
 
 This is in short a small scale open source project and you can contribute here as much as you want. Also don't be shy to put forward you ideas, just be free and express yourself. And for any help you can contact us, we would be pretty happy to help you guys along the way!
 
+### Some Very Neccessary Contributions Which are most welcome
+
+1. Making the website responsive(You can choose how you want the site to be in mobile or any other screen as you like!)
+
 ### Happy Breaking and Building 🥳
